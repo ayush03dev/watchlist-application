@@ -1,0 +1,4 @@
+watchlist:
+  max-size: 500
+  max-page-size: 0
+  allowed-user-ids: 1, 2, 3, 4

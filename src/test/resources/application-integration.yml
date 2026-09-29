@@ -1,0 +1,19 @@
+# Uses Postgres from docker-compose.yml on localhost:5432
+spring:
+  config:
+    activate:
+      on-profile: integration
+  datasource:
+    url: jdbc:postgresql://localhost:5432/watchlist
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: true

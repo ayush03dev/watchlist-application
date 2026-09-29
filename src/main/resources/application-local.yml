@@ -1,0 +1,16 @@
+# Start DB: docker compose up -d
+# Run app: ./mvnw spring-boot:run -Dspring-boot.run.profiles=local
+spring:
+  config:
+    activate:
+      on-profile: local
+  datasource:
+    url: jdbc:postgresql://localhost:5432/watchlist
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+management:
+  endpoint:
+    health:
+      show-details: always
